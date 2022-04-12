@@ -10,7 +10,15 @@ console.log(producto2.length) // Método para contar caracteres
 console.log(producto.indexOf('pulgadas')) // para buscar una palabra en un string 
 console.log(producto.includes('pulgadas')) // para buscar una palabra en un string, el retorno sera (true/false)
 
+const nombre = "Juan"
+const email = "correo@correo.com"
 
+console.log(nombre + email); //concatenación  
+console.log(nombre + " " + email); //concatenación 
+
+console.log(`Nombre cliente: ${nombre} email: ${email}`) // template Strings o Strings literal --> más utilizada
+
+ 
 // Números ******************************************************
 
 const numero1 = 100; // Números van sin comillas para que lo lea como tal
@@ -52,3 +60,58 @@ puntaje += 10;
 
 console.log(++puntaje); // Incrementa en 1
 console.log(--puntaje); // Decrementa en 1
+
+// Booleans **************************************************************
+    //solo tienen dos valores
+
+const boolean1 = true
+const boolean2 = false
+
+console.log(boolean1)
+console.log(boolean2)
+
+const en_existencias = true
+const Sin_existencias = false
+
+// Objetos *****************************************************************
+    //puedes crear una variable que contenga varias variables
+
+const nombreProducto = "monitos 27 pulgadas";
+const Precio = 330;
+const Disponoble = true;
+
+    //puedes crear una variable que contenga varias variables
+
+const Producto = {
+    nombreProducto : "monitos 27 pulgadas",
+    precio : 300,
+    disponoble : true,
+}
+
+console.log(Producto);
+console.log(Producto.precio);
+console.log(Producto.disponoble);
+console.log(Producto["precio"]); // Esto es lo mismo pero más complicado
+
+// Modificar objetos
+
+Producto.imagen = "imagen.jpg" // para agregar mas variables propíedades al objeto
+delete Producto.disponoble // Para elimiar propiedades o variables del objeto
+
+// Destructuring de un objeto
+    //crear variables a partir de los valores de un objeto
+
+const precioProducto = Producto.precio;   // forma antigua
+const NombreProducto = Producto.nombreProducto;
+
+const {precio, disponoble} = Producto; // Destructuring: crea la variable y extrae el valor en un solo paso
+
+console.log(precio);
+console.log(disponoble);
+
+
+
+
+
+
+
