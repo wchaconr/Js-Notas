@@ -175,6 +175,52 @@ numeros.forEach(function(numero) {
     console.log(nuevoArreglo);
 
 
+    // Arrays de objeros .....
+
+    const carrito = [
+        {nombre: 'Monitor', precio: 452},
+        {nombre: 'Torre', precio: 2452},
+        {nombre: 'Teclado', precio: 52},
+        {nombre: 'Mouse', precio: 49},
+        {nombre: 'Audio', precio: 152}
+    ]  
+
+    // forEach
+
+    meses.forEach(function(mes){
+        if(mes == 'Marzo') {
+            console.log('Existe');
+        }
+    })        // Busca en cada uno y si existe arroja respuesta personalizada
+
+    // Includes
+    let Resultado = meses.includes('Marzo'); // Busca en cada uno y si existe arroja 'true' 
+
+    // Some  --> ideal para arrays de objetos
+    Resultado = carrito.some(function(producto) {
+        return producto.nombre === 'Audio'
+    })   // Busca en cada uno y si existe arroja 'true' 
+
+
+    // Reduce  ?????n AQUI TENMGO DUDAS, SE SUPONE QUE SUMA PERO NO ME DÁ
+    Resultado = carrito.reduce((total, producto) => total = producto.precio, 0);
+
+    // Filer
+    Resultado = carrito.filter(function(producto) {
+        return producto.precio > 400
+    });  // Filtra según mis necesidades
+
+    Resultado = carrito.filter(function(producto) {
+        return producto.nombre !== 'Audio'
+    }); // !== diferente
+
+    console.log(Resultado);
+
+    
+
+
+
+
 
 
 
