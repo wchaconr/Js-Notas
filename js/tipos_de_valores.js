@@ -109,6 +109,79 @@ const {precio, disponoble} = Producto; // Destructuring: crea la variable y extr
 console.log(precio);
 console.log(disponoble);
 
+// NOTA: Para ejecutar el codigo de JS de manera estricta usar "use strict"
+
+// Sellar objetos o congelar objetos
+
+Object.freeze(Producto); // Despues de esta linea "Producto" no se puede modificar, agregar, ni eliminar
+    //.seal es similar. No se puede agregar, ni eliminar; pero si modificar.
+
+// Unir dos objetos
+
+    // const Producto = {
+        //  nombreProducto : "monitos 27 pulgadas",
+        //  precio : 300,
+        //  disponoble : true,}
+
+const medidas = {
+    peso: "1kg",
+    medida: "2m3"
+}
+
+const nuevoProducto = {...Producto, ...medidas };
+
+console.log(nuevoProducto) // arroja la union de los 2 objetos
+
+// Arrays o arreglos **********************************************************************
+
+const numeros = [10, 20, 30, 40, 50] // siempre que veas llaves son arreglos
+
+const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo']
+
+console.table(meses);
+console.table(numeros, meses);
+
+// acceder a los valores de un arreglo
+
+console.log(meses[4]);
+
+//conocer la extension de un arreglo
+
+console.log(meses.length); // Para mostrar la extención
+
+numeros.forEach(function(numero) {
+    console.log(numero);
+})
+
+// Metodos para Arrays
+
+    //Modificar arrays --> agregar
+
+    numeros.push (60, 70, 80); // agregar al final
+
+    numeros.unshift (-40,-30,-20,-10, 0); // agregar al inicio
+
+    //Modificar arrays --> Eliminar elementos
+
+    numeros.pop(); // elimina el ultimo elemento
+    numeros.shift(); // elimina el primer elemento
+    numeros.splice(3, 1)  //elimina el numero selecionado (cantidad 1)
+
+    console.table(numeros);
+
+    // rest operator o spread operator 
+
+    const nuevoArreglo = ['Diciembre', ...meses, 'Junio']; // No modifica el arreglo original sino lo modifica
+    console.log(nuevoArreglo);
+
+
+
+
+
+
+
+
+
 
 
 
