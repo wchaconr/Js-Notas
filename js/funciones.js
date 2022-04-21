@@ -68,3 +68,49 @@ console.log(total);
 
 const totalAPagar = calcularImpuesto(total);
 console.log(`El total a pagar con impuestos es de: $${totalAPagar}`); 
+
+// Arrow functions
+    //otra forma de declarar funciones
+
+const sumar3 = (n1, n2) => console.log(n1 + n2)    // Se cambia la palabra function por =>
+
+sumar3(3, 20);
+
+const aprendiendo = tecnologia => console.log(`Aprendiendo ${tecnologia}`)
+
+aprendiendo("JavaScript")
+
+    // los arrow functions brillan en los arroy metods porque los simplifica MUCHO
+
+const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo']
+
+const carrito = [
+    {nombre: 'Monitor', precio: 452},
+    {nombre: 'Torre', precio: 2452},
+    {nombre: 'Teclado', precio: 52},
+    {nombre: 'Mouse', precio: 49},
+    {nombre: 'Audio', precio: 152}
+]  
+
+// forEach en arrow functions
+
+meses.forEach ( mes => { if(mes == 'Marzo') {
+        console.log('Existe');
+    }
+})        // Busca en cada uno y si existe arroja respuesta personalizada
+
+
+// Some  en arrow functions
+Resultado = carrito.some (producto => producto.nombre === 'Audio')   // Busca en cada uno y si existe arroja 'true' 
+
+
+// Reduce en arrow functions 
+Resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
+
+// Filer en arrow functions
+Resultado = carrito.filter(producto => producto.precio > 400);  // Filtra según mis necesidades
+
+Resultado = carrito.filter(producto => producto.nombre !== 'Audio'); // mustro todos excepto ... ( !== diferente)
+
+console.log(Resultado);
+

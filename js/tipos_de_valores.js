@@ -202,8 +202,8 @@ numeros.forEach(function(numero) {
     })   // Busca en cada uno y si existe arroja 'true' 
 
 
-    // Reduce  ?????n AQUI TENMGO DUDAS, SE SUPONE QUE SUMA PERO NO ME DÁ
-    Resultado = carrito.reduce((total, producto) => total = producto.precio, 0);
+    // Reduce  se SUMAn los valores.
+    Resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
 
     // Filer
     Resultado = carrito.filter(function(producto) {
