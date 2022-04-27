@@ -1,0 +1,22 @@
+// Programación orientada a objetos ****************
+
+//Object literal
+
+const producto0 = {
+    nombre: 'sdcvcx',
+    precio: 4512
+}
+
+//Object constructor
+    //Sintaxis muy similar a una funcion
+
+    function Producto(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    const producto1 = new Producto('Monitor curvo 35 pulgadas', 800)
+    const producto2 = new Producto('laptop lenovo', 2140)
+
+    console.log(producto1);
+    console.log(producto2);
