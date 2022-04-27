@@ -114,3 +114,20 @@ Resultado = carrito.filter(producto => producto.nombre !== 'Audio'); // mustro t
 
 console.log(Resultado);
 
+
+
+
+
+
+// this
+
+const reservacion = {
+    nombre: 'Wilder',
+    appellido: 'rokefeller',
+    aPagar: 562400,
+    pagado: true,
+    informacion: function () {
+        console.log(`el cliente ${this.nombre} reservó y su cantidad a pagar es ${this.aPagar}`);
+    }
+}
+reservacion.informacion();
