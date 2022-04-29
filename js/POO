@@ -18,5 +18,61 @@ const producto0 = {
     const producto1 = new Producto('Monitor curvo 35 pulgadas', 800)
     const producto2 = new Producto('laptop lenovo', 2140)
 
+function formatearProducto(producto) {
+    return `El prodocto ${producto.nombre} tiene un valor de $ ${producto.precio} `
+}
+
     console.log(producto1);
     console.log(producto2);
+
+
+
+// Prototype --< Permite crear funciones que solo se utilizan en un objeto especifico
+
+Producto.prototype.formatearProducto = function() {
+    return `El prodocto ${this.nombre} tiene un valor de $ ${this.precio} `
+}
+
+// console.log(producto2.formatearProducto());
+// console.log(producto1.formatearProducto());
+
+
+
+// CLASES EN POO
+
+class Product {
+    constructor(nombre, precio) {
+        this.nombre=nombre;
+        this.precio=precio;
+    }
+    formatearProducto() {
+        return `El prodocto ${this.nombre} tiene un valor de $ ${this.precio}`
+    }
+    formatearPrecio() {
+        return `El precio del producto es ${this.precio}`
+    }
+} 
+
+const producto3 = new Product('Torre ANTEC led RGV', 1100);
+const producto4 = new Product('laptop ASUS', 2640);
+
+// Herencia --> forma de pasar atributos a otra clase
+
+class Libro extends Product {
+    constructor(nombre, precio, ISBN){
+        super(nombre, precio);
+        this.ISBN=ISBN;
+    }
+    formatearProducto() {
+        return `${super.formatearProducto()} y su ISBN es: ${this.ISBN}`
+    }
+}
+
+const libro = new Libro('JavaScript la Revolución', 800, "ISBN-7985d521")
+
+
+console.log(producto3);
+console.log(producto4.formatearProducto);
+console.log(libro);
+console.log(libro.formatearPrecio());
+console.log(libro.formatearProducto());
