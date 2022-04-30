@@ -1,0 +1,3 @@
+const usuarioAutenticado = new Promise( () => {
+    
+});

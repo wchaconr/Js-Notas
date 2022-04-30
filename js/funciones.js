@@ -131,3 +131,16 @@ const reservacion = {
     }
 }
 reservacion.informacion();
+
+
+
+
+// Calculate and print the sum of the elements in an array
+
+function aVeryBigSum(ar) {
+    let total = 0
+    for (let i in ar) {
+        total += ar[i];
+    }
+    return total;
+}

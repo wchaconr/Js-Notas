@@ -40,6 +40,19 @@ for (let i = 1; i < 100; i++) {
     }
 }
 
+// ejercicio compara tres pares de puntuaciones
+function compareTriplets(a, b) {
+    let points = [0, 0];
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > b[i]) {
+            points[0]++;
+        } else if (a[i] != b[i]) {
+            points[1]++;
+        }
+    }
+    return points;
+}
+
 // While loop     --> primero evalua la condición y si es verdadera, luego ejecuta el código
 
 let i = 1;  //indice
